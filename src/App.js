@@ -51,8 +51,7 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
   }
   
 
-  const taskList = tasks.
-    filter(FILTER_MAP[filter])
+  const taskList = tasks.filter(FILTER_MAP[filter])
     .map((task) => (
     <Todo id={task.id} name={task.name} completed={task.completed} key={task.id}     
     toggleTaskCompleted={toggleTaskCompleted} deleteTask={deleteTask} editTask={editTask}
@@ -105,7 +104,6 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
       </div>
       <h2 id="list-heading"  tabIndex="-1" ref={listHeadingRef}>{headingText}</h2>
       <ul
-        role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
           {taskList}
